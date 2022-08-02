@@ -11,10 +11,12 @@
     text-align: center;
     background-color: aquamarine;
     padding: 20px;
+    background-image: linear-gradient(to right, bisque, darkolivegreen );
 }
 
 .logo {
     height: 250px;
+    transform: skewY(3deg); 
 }
 
 /*BARRA MENU*/
@@ -70,6 +72,20 @@
 
 .fotos {
     text-align: center;
+    text-align: center;
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
 }
 
 /*FOOTER*/
@@ -119,7 +135,24 @@
 
 .perfil__medio {
     width: 600px;
+    width: 600px;
+    animation-name: efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-delay: 1s;
 
+}
+
+@keyframes efecto { 
+    0%{ width: 100px;}
+    12%{ width: 60px; background-color: darkorange;}
+    25%{ width: 100px; background-color: darkgray;}
+    50%{ width: 500px; background-color: chartreuse;}
+    75%{ width: 200px; background-color: aquamarine;}
+    100%{ width: 100px; background-color: darkgreen;}
+    
+    
 }
 
 #perfil {
@@ -218,6 +251,16 @@ th {
    
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+input:focus{
+    height: 20px;
+    background-color:bisque;
+
+}
+
+input{
+    transition: 2s linear;
+} 
 
 
 @media screen and (max-width: 360px) {
